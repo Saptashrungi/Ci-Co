@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CICO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="{% static '/css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+</head>
+
+<body class="home-body" style=" background-image: url('{% static "/img/bgcico.png" %}');">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md ">
+        <div class="container-fluid">
+            {% if person.is_authenticated %}
+            <a href="{% url 'check' %}"><button class="btn stylebtn btn3 animate__animated animate__slideInDown">Check-I/O</button></a>
+            <a href="{% url 'logout' %}"><button class="btn stylebtn btn3 animate__animated animate__slideInDown">Log Out</button></a>
+            {% elif not person.is_authenticated %}
+            <a href="{% url 'login' %}"><button class="btn stylebtn btn3 animate__animated animate__slideInDown">Login</button></a>
+            <a href="{% url 'register' %}"><button class="btn stylebtn btn3 animate__animated animate__slideInDown">Sign Up</button></a>
+            {% endif %}
+        </div>
+    </nav>
+    <div id='heading' class="container  home animate__animated animate__slideInDown">
+        <div class="h " data-content="C">C</div>
+        <div class="o" data-content="I">I</div>
+        <div class="h" data-content="C">C</div>
+        <div class="o" data-content="O">O</div>
+    </div>
+    <div class="container content home animate__animated animate__slideInUp">
+        <center>Check-In Check-Out site for your organization</center>
+        {% if person.is_authenticated %}
+        <center>Welcome to CiCo! You have logged in successfully!!</center>
+        {% endif %}
+    </div>
+</body>
+
+</html>

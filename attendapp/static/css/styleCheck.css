@@ -1,0 +1,325 @@
+/* {% load static %} */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+
+.home-body{
+  background: rgba(0,0,0,0.4);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #fafafa;
+  margin:0;
+  padding:0;
+ font-family: 'Comfortaa', cursive;
+
+}
+
+.about-body{
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #fafafa;
+  margin:0;
+  padding:0;
+ font-family: 'Comfortaa', cursive;
+
+}
+/*html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+*/
+div[class*=box] {
+  height: 33.33%;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ #heading{
+font-family: 'Roboto', sans-serif;
+  display:flex;
+  /* background-color: black; */
+  font-size: 10vw;
+  text-align: center ;
+  justify-content: center;
+
+ }
+ .content{
+  cursor: pointer;
+ }
+
+ .h{
+  animation:shakeH 1s infinite;
+ }
+
+.h:hover{
+  transform: scale(1.5);
+}
+
+.o{
+  animation:shakeO 1s infinite;
+ }
+
+.o:hover{
+  transform: scale(1.5);
+}
+@keyframes shakeH {
+  10%, 90% {
+    transform: translate3d(0, -1px, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(0, 2px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(0, 4px, 0);
+  }
+}
+
+@keyframes shakeO{
+  20%, 80%  {
+    transform: translate3d(0, -1px, 0);
+  }
+  
+  10%, 90%{
+    transform: translate3d(0, 2px, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(0, 4px, 0);
+  }
+}
+
+.h::before {
+  cursor: pointer;
+    position: absolute;
+    content: attr(data-content);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    color:#8b81a1;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: width 275ms ease;
+  }
+ .h:hover::before {
+    width: 100%;
+    height: 100%;
+  cursor: pointer;
+  }
+
+ .o::before {
+  cursor: pointer;
+    position: absolute;
+    content: attr(data-content);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    color: #9fcefc;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: width 275ms ease;
+  }
+.o:hover::before{
+  width: 100%;
+    height: 100%;
+  cursor: pointer;
+}
+
+.home{
+    background-attachment: fixed;
+  margin-top: 50px;
+
+}
+
+
+[class*="col-"] {
+    padding: 1rem;
+}
+
+.dropdown-menu {
+  border-radius: 10px;
+  opacity:0.9;
+}
+.dropdown-item{
+
+   border-radius: 50px;
+  opacity:0.9;
+
+}
+
+.dropdown-item:hover{
+  animation: dropanime 2s infinite;
+
+}
+
+@keyframes dropanime{
+  0%   {background-color:#4cb0e6;}
+  50%   {background-color: #84c5f0;}
+  100% {background-color:#4cb0e6;}
+}
+
+
+/* Style the list */
+ul.breadcrumb {
+  border-radius: 50px;
+  color: #000000;
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #fafafa;
+  opacity:0.8;
+}
+
+ul.breadcrumb:hover{
+  opacity: 0.6;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+.hostel-slideshow-container{
+
+  display: flex;
+justify-content: center;
+margin-top: 50px;
+background-attachment: fixed;
+}
+.map-centre{
+  
+  display: flex;
+  justify-content: center;
+  background-attachment:fixed;
+}
+.carousel-item{
+  border: 5px solid #000000;
+  width: 100%;
+}
+
+.about-content{
+  margin-top: 70px;
+}
+
+
+
+.about-item{
+ border: 5px solid #000000;
+   width: 100vw;
+
+}
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+
+
+
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  color: black;
+  background-color: transparent;
+}
+
+
+  
+/* 
+========================
+      BUTTON TWO
+========================
+*/
+.btn-two {
+  margin: 50px;
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative; 
+}
+.btn-two span {
+  z-index: 2; 
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%; 
+}
+.btn-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255,255,255,0);
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255,255,255,0);
+}

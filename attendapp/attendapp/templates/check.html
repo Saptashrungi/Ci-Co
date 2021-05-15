@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Check</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href="{% static '/css/styleCheck.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+</head>
+
+<body class="home-body" style=" background-image: url('{% static "/img/b2.png" %}');">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md ">
+        <div id='heading' class="container  home animate__animated animate__slideInDown">
+            <div class="h " data-content="C">C</div>
+            <div class="o" data-content="I">I</div>
+            <div class="h" data-content="C">C</div>
+            <div class="o" data-content="O">O</div>
+        </div>
+    </nav>
+    <!-- Hover #2 -->
+    <div class="box-2">
+        <form method="POST">
+            {% csrf_token %}
+            <button class="btn btn-two" type="submit" name="checkin">CHECK IN</button>
+        </form>
+    </div>
+    <div class="box-2">
+        <form method="POST">
+            {% csrf_token %}
+            <button class="btn btn-two" type="submit" name="checkout">CHECK OUT</button>
+        </form>
+    </div>
+</body>
+
+</html>
