@@ -78,10 +78,12 @@ Whenever you close the current terminal window, activate the virtual environment
 
                `python -m pip install django-allauth`
 
-8. For Google-Auth:
+8. For Admin:
 
+   Enter your EMAIL_HOST_USER and EMAIL_HOST_PASSWORD in settings.py
    Create superuser to access admin panel.
-
+            `python manage.py migrate --run-syncdb`
+            `python manage.py makemigrations`
             `python manage.py createsuperuser`
 
    You’re required to provide “username”, “email” and “password” in the terminal. Once you’re done, proceed to start the server:
